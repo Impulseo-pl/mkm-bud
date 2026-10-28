@@ -1847,3 +1847,13 @@ footer{view-transition-name:mt-foot}
 
 /* === szary tekst dociągnięty do czytelności (WCAG 4.5 na wszystkich tłach) === */
 :root{--muted:#64676C;}
+
+/* === LOGO WYEKSPONOWANE (prośba klientki 28.10.2026: „logo ma być bardziej wyeksponowane") ===
+   Pasek: ciasno przycięty granatowy kafel (logo-nav.jpg) zamiast kwadratu z szerokim marginesem, większy.
+   Hero i stopka: złoty znak na przezroczystym tle (logo-gold.png) na ciemnym tle. */
+.nav .brand-logo{height:76px;max-width:none;border-radius:6px;box-shadow:0 6px 20px rgba(8,14,30,.3)}
+.nav.is-stuck .brand-logo{height:60px}
+@media(min-width:681px){.nav .nav-inner{height:92px}.nav.is-stuck .nav-inner{height:72px}}
+@media(max-width:680px){.nav .brand-logo{height:56px}.nav.is-stuck .brand-logo{height:50px}}
+.hf-logo{display:block;height:min(clamp(96px,6vw + 60px,150px),15svh);width:auto;margin-bottom:min(var(--space-6),2.6svh);filter:drop-shadow(0 4px 16px rgba(0,0,0,.5))}
+.foot-logo{display:block;height:112px;width:auto;margin-bottom:var(--space-2)}
