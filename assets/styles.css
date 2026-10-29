@@ -1857,3 +1857,8 @@ footer{view-transition-name:mt-foot}
 @media(max-width:680px){.nav .brand-logo{height:56px}.nav.is-stuck .brand-logo{height:50px}}
 .hf-logo{display:block;height:min(clamp(96px,6vw + 60px,150px),15svh);width:auto;margin-bottom:min(var(--space-6),2.6svh);filter:drop-shadow(0 4px 16px rgba(0,0,0,.5))}
 .foot-logo{display:block;height:112px;width:auto;margin-bottom:var(--space-2)}
+
+/* === JEDNO LOGO NA PIERWSZYM EKRANIE (uwaga 29.10.2026: „wystarczy to jedno wyeksponowane logo, czemu są dwa?") ===
+   Strona główna: na górze widać tylko duże złote logo w hero; logo w pasku pojawia się dopiero po przewinięciu. */
+.home .nav .brand-logo{transition:opacity .3s ease,visibility .3s ease,height .3s ease}
+.home .nav:not(.is-stuck) .brand-logo{opacity:0;visibility:hidden}
